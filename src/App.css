@@ -1,0 +1,207 @@
+/* ── App layout ── */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+/* ── Toolbar ── */
+.toolbar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.25rem;
+  min-height: 44px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #2a2a2a;
+  color: #ffffff;
+  transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover {
+  background: #3a3a3a;
+}
+
+.btn-primary {
+  background: #d32f2f;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #b71c1c;
+}
+
+/* ── Bingo card ── */
+.bingo-card-wrapper {
+  /*
+   * Size the board to the shorter screen edge minus some breathing room
+   * for the toolbar, heading, and footer above/below it.
+   * In portrait: viewport width is shorter → use vw.
+   * In landscape: viewport height is shorter → use vh.
+   * The min() picks the smaller of the two automatically.
+   */
+  width: min(calc(100vw - 2rem), calc(100vh - 10rem));
+  max-width: 640px;
+  position: relative;
+}
+
+.bingo-grid {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+/* ── Tile ── */
+.bingo-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border: 2px solid #3a3a3a;
+  border-radius: 8px;
+  background: #1e1e1e;
+  cursor: pointer;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    transform 0.1s;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  word-break: break-word;
+  overflow: hidden;
+  container-type: size;
+}
+
+.bingo-tile span {
+  font-size: 12cqi;
+}
+
+.bingo-tile:hover:not(:disabled) {
+  border-color: #d32f2f;
+  transform: scale(1.03);
+}
+
+.bingo-tile.marked {
+  background: #d32f2f;
+  color: #fff;
+  border-color: #b71c1c;
+}
+
+.bingo-tile.free-space {
+  background: #d32f2f;
+  border-color: #b71c1c;
+  cursor: default;
+  padding: 12%;
+}
+
+.free-space-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ── Win banner ── */
+.win-banner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  background: rgba(211, 47, 47, 0.85);
+  border-radius: 12px;
+  z-index: 10;
+  letter-spacing: 0.15em;
+  animation: pop 0.4s ease-out;
+  pointer-events: none;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ── Responsive: small screens ── */
+@media (max-width: 400px) {
+  .bingo-grid {
+    gap: 2px;
+  }
+
+  .bingo-tile {
+    border-radius: 4px;
+  }
+
+  .toolbar {
+    gap: 0.35rem;
+  }
+
+  .btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ── Responsive: landscape ── */
+@media (orientation: landscape) {
+  .app {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    min-height: 100vh;
+  }
+
+  /* Board fills the height in landscape */
+  .bingo-card-wrapper {
+    width: auto;
+    height: min(calc(100vh - 2rem), calc(100vw - 2rem));
+    max-width: none;
+    flex-shrink: 0;
+  }
+
+  .bingo-grid {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1;
+  }
+
+  /* Stack buttons vertically beside the board */
+  .app-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .win-banner {
+    font-size: 2.5rem;
+  }
+}
