@@ -38,4 +38,30 @@ Edit `public/labels.json` to change the default bingo tile texts:
 }
 ```
 
-Provide at least 24 labels (the center tile is always a free space). Labels can also be edited at runtime by clicking **Edit Labels** in the app.
+Provide at least 24 labels (the center tile is always a free space).
+
+## Deployment (GitHub Pages)
+
+The production build in `dist/` is checked into the repository so it can be served directly by GitHub Pages.
+
+### Initial setup
+
+1. Go to your repository on GitHub: **Settings > Pages**
+2. Under **Source**, select **Deploy from a branch**
+3. Set branch to **main** and folder to **`/dist`**
+4. Click **Save**
+
+The site will be available at `https://<user>.github.io/equippers-bingo/`.
+
+### Updating the deployed site
+
+After making changes, rebuild and commit:
+
+```bash
+npm run build
+git add dist/
+git commit -m "rebuild for deployment"
+git push
+```
+
+GitHub Pages will pick up the new files automatically.
