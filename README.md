@@ -20,7 +20,7 @@ Open the URL printed in the terminal (default: http://localhost:5173).
 | Command | Description |
 |---|---|
 | `npm run dev` | Start the Vite dev server with hot reload |
-| `npm run build` | Type-check and build for production into `dist/` |
+| `npm run build` | Type-check and build for production into `docs/` |
 | `npm run preview` | Serve the production build locally |
 | `npm run lint` | Run ESLint |
 
@@ -42,7 +42,7 @@ Provide at least 24 labels (the center tile is always a free space).
 
 ## Deployment (GitHub Pages)
 
-The production build in `dist/` is checked into the repository so it can be served directly by GitHub Pages.
+The production build in `docs/` is checked into the repository so it can be served directly by GitHub Pages.
 
 ### Initial setup
 
@@ -59,7 +59,7 @@ After making changes, rebuild and commit:
 
 ```bash
 npm run build
-git add dist/
+git add docs/
 git commit -m "rebuild for deployment"
 git push
 ```
