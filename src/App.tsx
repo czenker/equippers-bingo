@@ -85,8 +85,15 @@ function App() {
     setHasWon(false);
   }, []);
 
-  const handleNewGame = useCallback(() => {
-    setTiles(createTiles(shuffle(labels)));
+  const handleNewGame = useCallback(async () => {
+    try {
+      const freshLabels = await loadLabels();
+      setLabels(freshLabels);
+      setTiles(createTiles(shuffle(freshLabels)));
+    } catch {
+      // If fetching fails, fall back to the currently stored labels
+      setTiles(createTiles(shuffle(labels)));
+    }
     setHasWon(false);
   }, [labels]);
 

@@ -8,7 +8,7 @@ export const GRID_SIZE = 5;
 export const FREE_SPACE_INDEX = Math.floor((GRID_SIZE * GRID_SIZE) / 2);
 
 export async function loadLabels(url = "./labels.json"): Promise<string[]> {
-  const res = await fetch(url);
+  const res = await fetch(url, { cache: "no-cache" });
   if (!res.ok) throw new Error(`Failed to load labels from ${url}: ${res.status}`);
   const data: { labels: string[] } = await res.json();
   return data.labels;
