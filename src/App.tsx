@@ -1,18 +1,31 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import BingoCard from "./components/BingoCard";
-import { checkWin, createTiles, loadLabels, shuffle, type BingoTile } from "./types";
+import {
+  checkWin,
+  createTiles,
+  createTilesFromKeys,
+  loadConfig,
+  type BingoTile,
+  type Label,
+  type UIConfig,
+} from "./types";
 import "./App.css";
 
 const STORAGE_KEY = "equippers-bingo-state";
 
 interface PersistedState {
-  labels: string[];
-  tiles: BingoTile[];
+  labelKeys: string[];
+  markedStates: boolean[];
 }
 
-function saveState(labels: string[], tiles: BingoTile[]) {
+function saveState(tiles: BingoTile[]) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({ labels, tiles }));
+    const labelKeys = tiles.map((tile) => tile.key ?? "");
+    const markedStates = tiles.map((tile) => tile.marked);
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ labelKeys, markedStates })
+    );
   } catch {
     // localStorage may be unavailable (private browsing, quota exceeded, etc.)
   }
@@ -23,7 +36,7 @@ function loadPersistedState(): PersistedState | null {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return null;
     const parsed = JSON.parse(raw);
-    if (Array.isArray(parsed.labels) && Array.isArray(parsed.tiles)) {
+    if (Array.isArray(parsed.labelKeys) && Array.isArray(parsed.markedStates)) {
       return parsed as PersistedState;
     }
   } catch {
@@ -36,39 +49,55 @@ function loadPersistedState(): PersistedState | null {
 const persisted = loadPersistedState();
 
 function App() {
-  const [labels, setLabels] = useState<string[]>(persisted?.labels ?? []);
-  const [tiles, setTiles] = useState<BingoTile[]>(persisted?.tiles ?? []);
-  const [hasWon, setHasWon] = useState(() =>
-    persisted ? checkWin(persisted.tiles) : false,
-  );
-  const [loading, setLoading] = useState(!persisted);
+  const [labels, setLabels] = useState<Record<string, Label>>({});
+  const [uiConfig, setUiConfig] = useState<UIConfig | null>(null);
+  const [tiles, setTiles] = useState<BingoTile[]>([]);
+  const [hasWon, setHasWon] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   // Track whether we've finished initialisation so we don't persist the empty
   // initial state back to localStorage before the real state is loaded.
-  const initialised = useRef(!!persisted);
+  const initialised = useRef(false);
 
-  // ── Fallback: fetch labels.json when nothing was persisted ──
+  // ── Load config, labels and restore or initialize tiles ──
   useEffect(() => {
-    if (persisted) return;
-    loadLabels().then((loaded) => {
-      setLabels(loaded);
-      setTiles(createTiles(shuffle(loaded)));
+    loadConfig().then((config) => {
+      // Update page title
+      document.title = config.title;
+      setUiConfig(config.ui);
+      setLabels(config.labels);
+
+      let newTiles: BingoTile[];
+      if (persisted) {
+        // Restore from localStorage
+        newTiles = createTilesFromKeys(
+          persisted.labelKeys,
+          config.labels,
+          persisted.markedStates
+        );
+        setHasWon(checkWin(newTiles));
+      } else {
+        // Create new game
+        newTiles = createTiles(config.labels);
+      }
+
+      setTiles(newTiles);
       setLoading(false);
       initialised.current = true;
     });
   }, []);
 
-  // ── Persist whenever tiles or labels change ──
+  // ── Persist whenever tiles change ──
   useEffect(() => {
     if (initialised.current) {
-      saveState(labels, tiles);
+      saveState(tiles);
     }
-  }, [labels, tiles]);
+  }, [tiles]);
 
   const handleTileClick = useCallback((index: number) => {
     setTiles((prev) => {
       const next = prev.map((tile, i) =>
-        i === index ? { ...tile, marked: !tile.marked } : tile,
+        i === index ? { ...tile, marked: !tile.marked } : tile
       );
       setHasWon(checkWin(next));
       return next;
@@ -80,19 +109,19 @@ function App() {
       prev.map((tile) => ({
         ...tile,
         marked: tile.isFreeSpace,
-      })),
+      }))
     );
     setHasWon(false);
   }, []);
 
   const handleNewGame = useCallback(async () => {
     try {
-      const freshLabels = await loadLabels();
-      setLabels(freshLabels);
-      setTiles(createTiles(shuffle(freshLabels)));
+      const config = await loadConfig();
+      setLabels(config.labels);
+      setTiles(createTiles(config.labels));
     } catch {
-      // If fetching fails, fall back to the currently stored labels
-      setTiles(createTiles(shuffle(labels)));
+      // If fetching fails, fall back to creating new tiles with current labels
+      setTiles(createTiles(labels));
     }
     setHasWon(false);
   }, [labels]);
@@ -119,7 +148,12 @@ function App() {
           </button>
         </div>
       </div>
-      <BingoCard tiles={tiles} onTileClick={handleTileClick} hasWon={hasWon} />
+      <BingoCard 
+        tiles={tiles} 
+        onTileClick={handleTileClick} 
+        hasWon={hasWon}
+        logoPath={uiConfig?.logoPath}
+      />
     </div>
   );
 }

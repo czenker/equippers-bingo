@@ -5,9 +5,10 @@ interface Props {
   tiles: BingoTileType[];
   onTileClick: (index: number) => void;
   hasWon: boolean;
+  logoPath?: string;
 }
 
-export default function BingoCard({ tiles, onTileClick, hasWon }: Props) {
+export default function BingoCard({ tiles, onTileClick, hasWon, logoPath }: Props) {
   return (
     <div className="bingo-card-wrapper">
       {hasWon && <div className="win-banner">BINGO!</div>}
@@ -19,7 +20,7 @@ export default function BingoCard({ tiles, onTileClick, hasWon }: Props) {
         }}
       >
         {tiles.map((tile, i) => (
-          <BingoTile key={i} tile={tile} onClick={() => onTileClick(i)} />
+          <BingoTile key={i} tile={tile} onClick={() => onTileClick(i)} logoPath={logoPath} />
         ))}
       </div>
     </div>

@@ -1,50 +1,150 @@
 {
-  "labels": [
-    "Pastor geht mit Füßen über Bühnenkante",
-    "KI wird erwähnt",
-    "jemand hustet oder niest",
-    "\"Alter Schwede\"",
-    "Du hast einen Investment-Hut in der Hand",
-    "euphorisch gesprochenes Ah-määään\"",
-    "ADHS Moment",
-    "Zeit wird angesprochen",
-    "Flasche fällt um",
-    "\"Das Keyboard / die Band kann nach oben kommen\"",
-    "Jemand lacht laut",
-    "Wasser tropft durch die Decke",
-    "GEN Z",
-    "\"Seid ihr da?\"",
-    "Das war erst die Einleitung",
-    "\"Haben wir einen Applaus für Gott?\"",
-    "\"Sagt mal alle gemeinsam\"",
-    "\"Hallo ihr Lieben\"",
-    "Thema einer anderen Session wird angeteasert",
-    "\"Gebt der Band nochmal einen richtig dicken Applaus\"",
-    "\"Spielst du heute zum ersten Mal? Bist du Single?\"",
-    "Eine Geschichte aus der letzten Woche",
-    "Schreibfehler auf der Leinwand",
-    "Handy klingelt laut",
-    "\"Eins: Jesus liebt dich. Zwei:...\"",
-    "\"Come On!\"",
-    "Glatzen von Dan, Paddy, Lukas werden thematisiert",
-    "Mo trägt türkisen 80er Jahre Gruselpulli auf der Bühne",
-    "Kidsnummer wird angezeigt und jemand verlässt den Saal",
-    "\"bring deine Freunde mit\"",
-    "Jemand macht definitiv keine Predigtnotizen auf dem Handy",
-    "jemand vom Praise Team geht direkt nach Verlassen der Bühne aufs Klo",
-    "Extrameile",
-    "\"dein nächster Schritt\"",
-    "jemand postet während der Session ein bearbeitetes Bild in MSfsH",
-    "Pastor benutzt falschen Imperativ",
-    "nach letztem Song setzt keine Musik von der Playlist ein",
-    "Predigtserie wird unterbrochen. Oder fortgesetzt. Oder eine neue angefangen.",
-    "wir brauchen mehr Stühle",
-    "\"Wenn einer klatscht, klatschen alle\"",
-    "Update zum Bau",
-    "Voicecrack eines Sprechers",
-    "Bassdrop in einem Trailer",
-    "sag jemandem Hallo, den du noch nicht kennst",
-    "\"Sprich es aus\" / \"Sing es aus\"",
-    "direkte Ansprache an die Männer oder Frauen"
-  ]
+  "title": "Equippers Bingo",
+  "ui": {
+    "logoPath": "./logo.svg",
+    "primaryColor": "#d32f2f"
+  },
+  "labels": {
+    "A0001": {
+      "text": "Pastor geht mit Füßen über Bühnenkante"
+    },
+    "A0002": {
+      "text": "KI wird erwähnt"
+    },
+    "A0003": {
+      "text": "jemand hustet oder niest"
+    },
+    "A0004": {
+      "text": "\"Alter Schwede\""
+    },
+    "A0005": {
+      "text": "Du hast einen Investment-Hut in der Hand"
+    },
+    "A0006": {
+      "text": "euphorisches Ah-määän"
+    },
+    "A0007": {
+      "text": "ADHS Moment"
+    },
+    "A0008": {
+      "text": "Zeit wird angesprochen"
+    },
+    "A0009": {
+      "text": "Flasche fällt um"
+    },
+    "A0010": {
+      "text": "\"Das Keyboard / die Band kann nach oben kommen\""
+    },
+    "A0011": {
+      "text": "Jemand lacht laut"
+    },
+    "A0012": {
+      "text": "Wasser tropft durch die Decke"
+    },
+    "A0013": {
+      "text": "GEN Z"
+    },
+    "A0014": {
+      "text": "\"Seid ihr da?\""
+    },
+    "A0015": {
+      "text": "Das war erst die Einleitung"
+    },
+    "A0016": {
+      "text": "\"Haben wir einen Applaus für Gott?\""
+    },
+    "A0017": {
+      "text": "\"Sagt mal alle gemeinsam\""
+    },
+    "A0018": {
+      "text": "\"Hallo ihr Lieben\""
+    },
+    "A0019": {
+      "text": "Thema von einer anderen Session wird angeteasert"
+    },
+    "A0020": {
+      "text": "\"Gebt der Band nochmal einen richtig dicken Applaus\""
+    },
+    "A0021": {
+      "text": "\"Spielst du heute zum ersten Mal? Bist du Single?\""
+    },
+    "A0022": {
+      "text": "Eine Geschichte aus der letzten Woche"
+    },
+    "A0023": {
+      "text": "Schreibfehler auf der Leinwand"
+    },
+    "A0024": {
+      "text": "Handy klingelt laut"
+    },
+    "A0025": {
+      "text": "\"Eins: Jesus liebt dich. Zwei:...\""
+    },
+    "A0026": {
+      "text": "\"Come On!\""
+    },
+    "A0027": {
+      "text": "Glatzen von Dan, Paddy, Lukas werden thematisiert"
+    },
+    "A0028": {
+      "text": "Mo trägt türkisen 80er Jahre Gruselpulli auf der Bühne"
+    },
+    "A0029": {
+      "text": "Kidsnummer wird angezeigt und jemand verlässt den Saal"
+    },
+    "A0030": {
+      "text": "\"bring deine Freunde mit\""
+    },
+    "A0031": {
+      "text": "Jemand macht definitiv keine Predigtnotizen auf dem Handy",
+      "description": "Es ist mir neu, dass man in Candy Crush Notizen machen kann. Oder auf Amazon."
+    },
+    "A0032": {
+      "text": "jemand vom Praise Team geht direkt nach Verlassen der Bühne aufs Klo"
+    },
+    "A0033": {
+      "text": "Extrameile"
+    },
+    "A0034": {
+      "text": "\"dein nächster Schritt\""
+    },
+    "A0035": {
+      "text": "jemand postet während der Session ein bearbeitetes Bild in MSfsH"
+    },
+    "A0036": {
+      "text": "Pastor benutzt falschen Imperativ"
+    },
+    "A0037": {
+      "text": "nach letztem Song setzt keine Musik von der Playlist ein"
+    },
+    "A0038": {
+      "text": "Predigtserie wird unterbrochen. Oder fortgesetzt. Oder eine neue angefangen."
+    },
+    "A0039": {
+      "text": "wir brauchen mehr Stühle"
+    },
+    "A0040": {
+      "text": "\"Wenn einer klatscht, klatschen alle\""
+    },
+    "A0041": {
+      "text": "Update zum Bau"
+    },
+    "A0042": {
+      "text": "Voicecrack eines Sprechers"
+    },
+    "A0043": {
+      "text": "Bassdrop in einem Trailer"
+    },
+    "A0044": {
+      "text": "Sag jemandem Hallo, den du noch nicht kennst"
+    },
+    "A0045": {
+      "text": "\"Sprich es aus\" / \"Sing es aus\"",
+      "description": "Nur gültig in dieser Formulierung."
+    },
+    "A0046": {
+      "text": "direkte Ansprache an die Männer oder Frauen",
+      "description": "Es ist allgemein bekannt, dass sich Frauen nicht für Fußballgeschichten interessieren. Und Männer sich nicht so sehr um ihre Kinder kümmern, wie Frauen. Darum ist es wichtig, diese beiden Gruppen separat anzusprechen."
+    }
+  }
 }

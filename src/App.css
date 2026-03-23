@@ -83,8 +83,9 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   word-break: break-word;
-  overflow: hidden;
+  overflow: visible;
   container-type: size;
+  position: relative;
 }
 
 .bingo-tile span {
@@ -107,6 +108,24 @@
   border-color: #b71c1c;
   cursor: default;
   padding: 12%;
+}
+
+/* ── Description indicator ── */
+.description-indicator {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 15cqi;
+  height: 15cqi;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-icon-svg {
+  width: 100%;
+  height: 100%;
 }
 
 .free-space-logo {
@@ -203,5 +222,82 @@
 
   .win-banner {
     font-size: 2.5rem;
+  }
+}
+
+/* ── Description Modal ── */
+.description-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.description-modal {
+  background: #1e1e1e;
+  border: 2px solid #d32f2f;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease-out;
+}
+
+.description-modal h2 {
+  margin: 0 0 1rem 0;
+  color: #d32f2f;
+  font-size: 1.5rem;
+  word-break: break-word;
+}
+
+.description-modal p {
+  margin: 0;
+  color: #ffffff;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.description-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #d32f2f;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.description-modal-close:hover {
+  background: rgba(211, 47, 47, 0.2);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
