@@ -14,7 +14,7 @@ Write a bingo application with the following requirements.
 ## Design requirements
 
 * it **should** use corporate design from the equippers:
-  * `#121212` as black, `#ffffff` as white, `#d32f2f` as primary color
+  * `#121212` as black, `#ffffff` as white, `#ed1566` as primary color
   * if needed `#fdd835` can be used as secondary color, but it should be avoided
   * "Poppins" as font
   * default `line-height:1.5` for paragraphs

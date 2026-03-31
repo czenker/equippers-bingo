@@ -154,6 +154,9 @@ function App() {
         hasWon={hasWon}
         logoPath={uiConfig?.logoPath}
       />
+      <div className="footer-toolbar">
+        <p>Made with 🤖 by <span className="msfsh">Mein Scherz für sein Haus</span></p>
+      </div>
     </div>
   );
 }

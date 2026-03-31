@@ -14,6 +14,20 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+/* ── Footer Toolbar ── */
+.footer-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999999;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.footer-toolbar .msfsh {
+  color: #555555;
+}
 
 .btn {
   border: none;
@@ -34,12 +48,12 @@
 }
 
 .btn-primary {
-  background: #d32f2f;
+  background: #ed1566;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: #b71c1c;
+  background: #cc1258;
 }
 
 /* ── Bingo card ── */
@@ -88,24 +102,27 @@
   position: relative;
 }
 
+
 .bingo-tile span {
   font-size: 12cqi;
+  hyphens: auto;
+  word-break: normal;
 }
 
 .bingo-tile:hover:not(:disabled) {
-  border-color: #d32f2f;
+  border-color: #ed1566;
   transform: scale(1.03);
 }
 
 .bingo-tile.marked {
-  background: #d32f2f;
+  background: #ed1566;
   color: #fff;
-  border-color: #b71c1c;
+  border-color: #cc1258;
 }
 
 .bingo-tile.free-space {
-  background: #d32f2f;
-  border-color: #b71c1c;
+  background: #ed1566;
+  border-color: #cc1258;
   cursor: default;
   padding: 12%;
 }
@@ -144,7 +161,7 @@
   font-size: 4rem;
   font-weight: 900;
   color: #fff;
-  background: rgba(211, 47, 47, 0.85);
+  background: rgba(204, 18, 88, 0.85);
   border-radius: 12px;
   z-index: 10;
   letter-spacing: 0.15em;
@@ -220,6 +237,18 @@
     flex-direction: column;
   }
 
+  .footer-toolbar {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-toolbar p {
+    margin: 0;
+  }
+
   .win-banner {
     font-size: 2.5rem;
   }
@@ -242,7 +271,7 @@
 
 .description-modal {
   background: #1e1e1e;
-  border: 2px solid #d32f2f;
+  border: 2px solid #ed1566;
   border-radius: 12px;
   padding: 2rem;
   max-width: 500px;
@@ -256,7 +285,7 @@
 
 .description-modal h2 {
   margin: 0 0 1rem 0;
-  color: #d32f2f;
+  color: #ed1566;
   font-size: 1.5rem;
   word-break: break-word;
 }
@@ -275,7 +304,7 @@
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #d32f2f;
+  color: #ed1566;
   cursor: pointer;
   width: 32px;
   height: 32px;

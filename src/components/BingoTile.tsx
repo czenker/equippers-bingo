@@ -50,7 +50,7 @@ export default function BingoTile({ tile, onClick, logoPath }: Props) {
   // Determine border color based on tile state
   const getBorderColor = (): string => {
     if (tile.marked) {
-      return "#b71c1c"; // Dark red for marked tiles
+      return "#cc1258"; // Dark red for marked tiles
     }
     return "#3a3a3a"; // Default gray
   };
