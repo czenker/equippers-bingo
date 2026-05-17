@@ -1,131 +1,150 @@
 {
-  "title": "Shout Europe 2026",
+  "title": "Equippers Bingo",
   "ui": {
-    "logoPath": "./shout.svg",
-    "primaryColor": "#ed1566"
+    "logoPath": "./logo.svg",
+    "primaryColor": "#d32f2f"
   },
   "labels": {
-    "S0001": {
-      "text": "Direkte Interaktion zwischen Übersetzer und Pastor",
-      "description": "Pastor interagiert direkt mit dem Übersetzer. In der Regel in einer lustigen Art."
+    "A0001": {
+      "text": "Pastor geht mit Füßen über Bühnenkante"
     },
-    "S0002": {
-      "text": "Trailer gezeigt"
-    },
-    "S0003": {
-      "text": "Basecap auf der Bühne"
-    },
-    "S0004": {
-      "text": "Flasche fällt um"
-    },
-    "S0005": {
-      "text": "Tippfehler auf der LED-Wand"
-    },
-    "S0006": {
-      "text": "mindestens 20 Leute gleichzeitig auf der Bühne"
-    },
-    "S0007": {
-      "text": "Shout of Praise / Applaus für Jesus"
-    },
-    "S0008": {
-      "text": "offensichtliches technisches Problem"
-    },
-    "S0009": {
-      "text": "Gastprediger gibt Kostprobe seiner Deutschkenntnisse"
-    },
-    "S0010": {
-      "text": "Menschen \"ehren\""
-    },
-    "S0011": {
-      "text": "Referenz auf einen Film"
-    },
-    "S0012": {
+    "A0002": {
       "text": "KI wird erwähnt"
     },
-    "S0013": {
-      "text": "3-Punkte Predigt",
-      "description": "Nicht 2 Punkte. Nicht 4 Punkte. Nein, jede Predigt braucht genau 3 Punkte."
+    "A0003": {
+      "text": "jemand hustet oder niest"
     },
-    "S0014": {
-      "text": "\"Vergesst nicht eure Kinder abzuholen\""
+    "A0004": {
+      "text": "\"Alter Schwede\""
     },
-    "S0015": {
+    "A0005": {
+      "text": "Du hast einen Investment-Hut in der Hand"
+    },
+    "A0006": {
       "text": "euphorisches Ah-määän"
     },
-    "S0016": {
-      "text": "\"starke Predigt\", \"starker Tag\""
+    "A0007": {
+      "text": "ADHS Moment"
     },
-    "S0017": {
-      "text": "jemand trägt Shout Merch auf der Bühne"
+    "A0008": {
+      "text": "Zeit wird angesprochen"
     },
-    "S0018": {
-      "text": "Dedicate"
+    "A0009": {
+      "text": "Flasche fällt um"
     },
-    "S0019": {
-      "text": "\"Geh auf unsere Homepage\""
+    "A0010": {
+      "text": "\"Das Keyboard / die Band kann nach oben kommen\""
     },
-    "S0020": {
-      "text": "\"Dreh dich zu deinem Nachbarn um und sage…\""
-    },
-    "S0021": {
-      "text": "\"Wenn…, dann komm nach vorn\""
-    },
-    "S0022": {
-      "text": "Jemand macht den Witz mit \"Halle 45\" und \"Halle Luja\"",
-      "description": "Das ist lustig, weil wir in \"Halle 45\" sind und, wenn man die 45 durch \"luja\" ersetzt… Verstehst de? Verstehst de?"
-    },
-    "S0023": {
-      "text": "\"Wer von euch…\" Crowdwork"
-    },
-    "S0024": {
-      "text": "Ein Team wird lobend erwähnt"
-    },
-    "S0025": {
-      "text": "Shout London / Auckland wird erwähnt"
-    },
-    "S0026": {
-      "text": "Rhetorisches \"Stimmt das?\""
-    },
-    "S0027": {
-      "text": "Jemand hustet oder niest"
-    },
-    "S0028": {
+    "A0011": {
       "text": "Jemand lacht laut"
     },
-    "S0029": {
+    "A0012": {
+      "text": "Wasser tropft durch die Decke"
+    },
+    "A0013": {
+      "text": "GEN Z"
+    },
+    "A0014": {
+      "text": "\"Seid ihr da?\""
+    },
+    "A0015": {
+      "text": "Das war erst die Einleitung"
+    },
+    "A0016": {
+      "text": "\"Haben wir einen Applaus für Gott?\""
+    },
+    "A0017": {
+      "text": "\"Sagt mal alle gemeinsam\""
+    },
+    "A0018": {
+      "text": "\"Hallo ihr Lieben\""
+    },
+    "A0019": {
+      "text": "Thema von einer anderen Session wird angeteasert"
+    },
+    "A0020": {
+      "text": "\"Gebt der Band nochmal einen richtig dicken Applaus\""
+    },
+    "A0021": {
+      "text": "\"Spielst du heute zum ersten Mal? Bist du Single?\""
+    },
+    "A0022": {
+      "text": "Eine Geschichte aus der letzten Woche"
+    },
+    "A0023": {
+      "text": "Schreibfehler auf der Leinwand"
+    },
+    "A0024": {
       "text": "Handy klingelt laut"
     },
-    "S0030": {
-      "text": "IMAG verliert den Sprecher",
-      "description": "IMAG ist das Kamerabild des Sprechers auf der LED-Wand"
+    "A0025": {
+      "text": "\"Eins: Jesus liebt dich. Zwei:...\""
     },
-    "S0031": {
-      "text": "Erzählen von der Familie"
+    "A0026": {
+      "text": "\"Come On!\""
     },
-    "S0032": {
-      "text": "Bibelstelle auf der Leinwand zeigt eine Primzahl"
+    "A0027": {
+      "text": "Glatzen von Dan, Paddy, Lukas werden thematisiert"
     },
-    "S0033": {
-      "text": "in etwas \"hineinsprechen\" (z.B. Situation, Leben)"
+    "A0028": {
+      "text": "Mo trägt türkisen 80er Jahre Gruselpulli auf der Bühne"
     },
-    "S0034": {
-      "text": "Standing Ovations"
+    "A0029": {
+      "text": "Kidsnummer wird angezeigt und jemand verlässt den Saal"
     },
-    "S0035": {
-      "text": "Wiederholung, weil Reaktion nicht laut genug war",
-      "description": "ein Shout of Praise, ein \"Amen\", etc"
+    "A0030": {
+      "text": "\"bring deine Freunde mit\""
     },
-    "S0036": {
-      "text": "Ein Witz, der nicht zündet"
+    "A0031": {
+      "text": "Jemand macht definitiv keine Predigtnotizen auf dem Handy",
+      "description": "Es ist mir neu, dass man in Candy Crush Notizen machen kann. Oder auf Amazon."
     },
-    "S0037": {
-      "text": "Predigt mit Requisite"
+    "A0032": {
+      "text": "jemand vom Praise Team geht direkt nach Verlassen der Bühne aufs Klo"
     },
-    "S0038": {
-      "text": "Bezug auf Konferenz von letztem Jahr"
+    "A0033": {
+      "text": "Extrameile"
     },
-    "S0039": {
-      "text": "Witz, dass Neuseeland mehr Schafe als Einwohner hat"
+    "A0034": {
+      "text": "\"dein nächster Schritt\""
+    },
+    "A0035": {
+      "text": "jemand postet während der Session ein bearbeitetes Bild in MSfsH"
+    },
+    "A0036": {
+      "text": "Pastor benutzt falschen Imperativ"
+    },
+    "A0037": {
+      "text": "nach letztem Song setzt keine Musik von der Playlist ein"
+    },
+    "A0038": {
+      "text": "Predigtserie wird unterbrochen. Oder fortgesetzt. Oder eine neue angefangen."
+    },
+    "A0039": {
+      "text": "wir brauchen mehr Stühle"
+    },
+    "A0040": {
+      "text": "\"Wenn einer klatscht, klatschen alle\""
+    },
+    "A0041": {
+      "text": "Update zum Bau"
+    },
+    "A0042": {
+      "text": "Voicecrack eines Sprechers"
+    },
+    "A0043": {
+      "text": "Bassdrop in einem Trailer"
+    },
+    "A0044": {
+      "text": "Sag jemandem Hallo, den du noch nicht kennst"
+    },
+    "A0045": {
+      "text": "\"Sprich es aus\" / \"Sing es aus\"",
+      "description": "Nur gültig in dieser Formulierung."
+    },
+    "A0046": {
+      "text": "direkte Ansprache an die Männer oder Frauen",
+      "description": "Es ist allgemein bekannt, dass sich Frauen nicht für Fußballgeschichten interessieren. Und Männer sich nicht so sehr um ihre Kinder kümmern, wie Frauen. Darum ist es wichtig, diese beiden Gruppen separat anzusprechen."
     }
   }
 }
