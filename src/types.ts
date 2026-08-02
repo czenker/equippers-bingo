@@ -1,6 +1,7 @@
 export interface Label {
   text: string;
   description?: string;
+  category?: string;
 }
 
 export interface UIConfig {
@@ -40,24 +41,42 @@ export async function loadLabels(url = "./labels.json"): Promise<Record<string, 
 export function createTiles(labels: Record<string, Label>): BingoTile[] {
   // Convert object to array of entries and shuffle
   const entries = Object.entries(labels);
-  const shuffledEntries = shuffle(entries);
-  
-  // Extract keys and text values for tile creation
-  const labelKeys = shuffledEntries.map(([key, _]) => key);
-  const textLabels = shuffledEntries.map(([_, label]) => label.text);
-  const descriptions = shuffledEntries.map(([_, label]) => label.description);
-  
-  return Array.from({ length: GRID_SIZE * GRID_SIZE }, (_, i) => {
-    const isFree = i === FREE_SPACE_INDEX;
-    const adjustedIndex = i > FREE_SPACE_INDEX ? i - 1 : i;
+  let shuffledEntries = shuffle(entries);
+
+  const categories = new Set<string>();
+
+  const drawNextEntry = (): [string, Label] => {
+    let entry: [string, Label] | undefined;
+    do {
+      entry = shuffledEntries.shift();
+      if (!entry) throw new Error("Not enough labels to fill the grid");
+    } while (entry[1].category && categories.has(entry[1].category));
+    return entry;
+  };
+
+  const result = Array.from({ length: GRID_SIZE * GRID_SIZE }, (_, i) => {
+    if (i === FREE_SPACE_INDEX) {
+      return {
+        key: undefined,
+        label: "FREI",
+        description: undefined,
+        marked: true,
+        isFreeSpace: true,
+      };
+    }
+
+    const [key, label] = drawNextEntry();
+    if (label.category) categories.add(label.category);
+
     return {
-      key: isFree ? undefined : labelKeys[adjustedIndex],
-      label: isFree ? "FREI" : (textLabels[adjustedIndex] ?? `Feld ${i + 1}`),
-      description: isFree ? undefined : descriptions[adjustedIndex],
-      marked: isFree,
-      isFreeSpace: isFree,
+      key,
+      label: label.text,
+      description: label.description,
+      marked: false,
+      isFreeSpace: false,
     };
   });
+  return result;
 }
 
 /**

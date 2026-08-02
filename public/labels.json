@@ -15,7 +15,8 @@
       "text": "jemand hustet oder niest"
     },
     "A0004": {
-      "text": "\"Alter Schwede\""
+      "text": "\"Alter Schwede\"",
+      "category": "vocabulary"
     },
     "A0005": {
       "text": "Du hast einen Investment-Hut in der Hand"
@@ -45,7 +46,8 @@
       "text": "GEN Z"
     },
     "A0014": {
-      "text": "\"Seid ihr da?\""
+      "text": "\"Seid ihr da?\"",
+      "category": "engagement"
     },
     "A0015": {
       "text": "Das war erst die Einleitung"
@@ -54,7 +56,8 @@
       "text": "\"Haben wir einen Applaus für Gott?\""
     },
     "A0017": {
-      "text": "\"Sagt mal alle gemeinsam\""
+      "text": "\"Sagt mal alle gemeinsam\"",
+      "category": "engagement"
     },
     "A0018": {
       "text": "\"Hallo ihr Lieben\""
@@ -81,7 +84,8 @@
       "text": "\"Eins: Jesus liebt dich. Zwei:...\""
     },
     "A0026": {
-      "text": "\"Come On!\""
+      "text": "\"Come On!\"",
+      "category": "vocabulary"
     },
     "A0027": {
       "text": "Glatzen von Dan, Paddy, Lukas werden thematisiert"
@@ -93,7 +97,8 @@
       "text": "Kidsnummer wird angezeigt und jemand verlässt den Saal"
     },
     "A0030": {
-      "text": "\"bring deine Freunde mit\""
+      "text": "\"bring deine Freunde mit\"",
+      "category": "vocabulary"
     },
     "A0031": {
       "text": "Jemand macht definitiv keine Predigtnotizen auf dem Handy",
@@ -103,10 +108,12 @@
       "text": "jemand vom Praise Team geht direkt nach Verlassen der Bühne aufs Klo"
     },
     "A0033": {
-      "text": "Extrameile"
+      "text": "Extrameile",
+      "category": "vocabulary"
     },
     "A0034": {
-      "text": "\"dein nächster Schritt\""
+      "text": "\"dein nächster Schritt\"",
+      "category": "vocabulary"
     },
     "A0035": {
       "text": "jemand postet während der Session ein bearbeitetes Bild in MSfsH"
@@ -118,7 +125,8 @@
       "text": "nach letztem Song setzt keine Musik von der Playlist ein"
     },
     "A0038": {
-      "text": "Predigtserie wird unterbrochen. Oder fortgesetzt. Oder eine neue angefangen."
+      "text": "nicht die gleiche Predigtserie wie letzte Woche",
+      "description": "z.B. wenn eine neue Predigtserie gestartet wird oder ein Gastprediger die Serie unterbricht"
     },
     "A0039": {
       "text": "wir brauchen mehr Stühle"
@@ -140,11 +148,20 @@
     },
     "A0045": {
       "text": "\"Sprich es aus\" / \"Sing es aus\"",
+      "category": "vocabulary",
       "description": "Nur gültig in dieser Formulierung."
     },
     "A0046": {
       "text": "direkte Ansprache an die Männer oder Frauen",
       "description": "Es ist allgemein bekannt, dass sich Frauen nicht für Fußballgeschichten interessieren. Und Männer sich nicht so sehr um ihre Kinder kümmern, wie Frauen. Darum ist es wichtig, diese beiden Gruppen separat anzusprechen."
+    },
+    "A0047": {
+      "text": "Grüße von anderem Pastor",
+      "description": "Grüße von Paulus oder Petrus zählen auch"
+    },
+    "A0048": {
+      "text": "Produkt eines Milliardenunternehmens erwähnen",
+      "description": "z.B. iPhone, Google Maps, WhatsApp, TikTok, Amazon, BMW"
     }
   }
 }
